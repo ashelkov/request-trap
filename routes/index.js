@@ -1,9 +1,9 @@
-var express = require('express');
-var router = express.Router();
+var indexRoutes = require('./index.route');
+var trapRoutes = require('./trap.route');
+var trapRequestsRoute = require('./trapRequests.route');
 
-/* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
-});
-
-module.exports = router;
+module.exports = function(app) {
+  indexRoutes(app);
+  trapRequestsRoute(app);
+  trapRoutes(app);
+}
