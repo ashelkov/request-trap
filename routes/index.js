@@ -1,9 +1,9 @@
-var indexRoutes = require('./index.route');
-var trapRoutes = require('./trap.route');
-var trapRequestsRoute = require('./trapRequests.route');
+var indexRoute = require('./index.route');
+var trapRoute = require('./trap.route');
+var requestsRoute = require('./requests.route');
 
 module.exports = function(app) {
-  indexRoutes(app);
-  trapRequestsRoute(app);
-  trapRoutes(app);
+  indexRoute(app);
+  requestsRoute(app);
+  trapRoute(app);
 }
