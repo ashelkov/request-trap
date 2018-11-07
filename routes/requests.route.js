@@ -11,7 +11,13 @@ module.exports = function(app) {
         .sort({ created_at: 'desc' })
         .exec(function(err, requests) {
           if (err) res.send(err);
-          res.json(requests);
+          
+          // res.json(requests);
+          res.render('requests', {
+            title: 'Requests log',
+            endpoint,
+            requests,
+          });
         });
     });
 };

@@ -1,0 +1,30 @@
+extends layout
+
+block content
+  h1.text-center= title
+  h2 Endpoint: "#{endpoint}"
+  br
+  table.table.table-striped.table-bordered
+    thead
+      tr
+        th #
+        th created_at
+        th method
+        th queryString
+        th cookies
+    tbody
+      - if (requests.length)
+        -for (var i = 0; i < requests.length; i++)
+          tr
+            td
+              span= requests.length - i
+            td
+              span= requests[i].created_at
+            td
+              kbd= requests[i].method
+            td
+              code= requests[i].queryString
+            td
+              span= JSON.stringify(requests[i].cookies)
+      - else
+        p No requests on this endpoint!
