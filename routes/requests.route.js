@@ -2,9 +2,9 @@
 var Request = require("../models/request.model");
 
 module.exports = function(app) {
-  app.route('/*/requests')
+  app.route('/:trap_id/requests')
     .get(function(req, res) {
-      const endpoint = req.originalUrl.slice(0, req.originalUrl.indexOf('/requests'));
+      const endpoint = req.params.trap_id;
       
       // find requests by endpoint
       Request.find({ endpoint })

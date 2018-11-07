@@ -14,6 +14,12 @@ var RequestSchema = new Schema({
     type: Date,
     required: true
   },
+  headers: Map,
+  cookies: Map,
+  scheme: String,
+  queryString: String,
+  queryParams: Map,
+  remoteIP: String,
 });
 
 module.exports = mongoose.model("Request", RequestSchema);
