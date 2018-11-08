@@ -1,5 +1,9 @@
 extends layout
 
+block head
+  script(src="//cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.4/socket.io.js")
+  script(src="/scripts/socket.js")
+
 block content
   h1.text-center= title
   h2 Endpoint: "#{endpoint}"
