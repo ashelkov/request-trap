@@ -3,3 +3,17 @@ extends layout
 block content
   h1= title
   p Welcome to "#{title}" by #{author}
+  
+  section
+    br
+    p 
+      code /:trap_id
+      br
+      span Requests trap. Send any requests here to log them into DB.
+  
+    br
+    p 
+      code /:trap_id/requests
+      br
+      span Requests list filtered by endpoint (with realtime update).
+

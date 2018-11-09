@@ -1,5 +1,5 @@
 (function(){
-  const socket = io.connect('http://localhost:3000');
+  const socket = window.io.connect('http://localhost:3000');
   const path = window.location.pathname;
   const endpoint = path.slice(1, path.indexOf('/requests'));
 

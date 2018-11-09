@@ -1,4 +1,4 @@
-var mongoose = require("mongoose");
+var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
 var RequestSchema = new Schema({
@@ -22,4 +22,4 @@ var RequestSchema = new Schema({
   remoteIP: String,
 });
 
-module.exports = mongoose.model("Request", RequestSchema);
+module.exports = mongoose.model('Request', RequestSchema);

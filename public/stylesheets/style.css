@@ -7,6 +7,14 @@ a {
   color: #00B7FF;
 }
 
+p {
+  line-height: 2
+}
+
+section {
+  margin-left: 80px;
+}
+
 tr.added {
   animation: flash;
   animation-duration: 2s;

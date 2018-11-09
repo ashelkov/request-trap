@@ -6,4 +6,4 @@ module.exports = function(app) {
   indexRoute(app);
   requestsRoute(app);
   trapRoute(app);
-}
+};

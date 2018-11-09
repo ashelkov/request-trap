@@ -1,5 +1,5 @@
 // grab request model
-var Request = require("../models/request.model");
+var Request = require('../models/request.model');
 
 module.exports = function(app) {
   app.all('/:trap_id', function(req, res) {
