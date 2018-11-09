@@ -11,7 +11,6 @@ block content
   table.table.table-striped.table-bordered
     thead
       tr
-        th #
         th created_at
         th method
         th queryString
@@ -21,9 +20,7 @@ block content
         -for (var i = 0; i < requests.length; i++)
           tr
             td
-              span= requests.length - i
-            td
-              span= requests[i].created_at
+              span= new Date(requests[i].created_at).toUTCString()
             td
               kbd= requests[i].method
             td

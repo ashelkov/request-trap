@@ -20,6 +20,7 @@ module.exports = function(app) {
     // save the request
     newRequest.save(function(err, request) {
       if (err) res.send(err);
+      app.get('io').emit('new_request', request);      
       res.json(request);
     });
 

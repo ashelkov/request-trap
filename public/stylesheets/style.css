@@ -6,3 +6,13 @@ body {
 a {
   color: #00B7FF;
 }
+
+tr.added {
+  animation: flash;
+  animation-duration: 2s;
+}
+
+@keyframes flash {
+  0% { opacity: 0; } 
+	100% { opacity: 1; }
+}
