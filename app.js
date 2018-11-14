@@ -12,14 +12,17 @@ var app = express();
 require('./models/request.model');
 
 // mongoose instance connection
+const mongodbURL = 'mongodb://ashe:andrey1986@ds153763.mlab.com:53763/request-trap';
+const opts = {
+  useCreateIndex: true,
+  useNewUrlParser: true,
+};
 mongoose.Promise = global.Promise;
-mongoose.connect(
-  'mongodb://localhost/request-trap',
-  {
-    useCreateIndex: true,
-    useNewUrlParser: true,
+mongoose.connect(mongodbURL, opts, function(err) {
+  if (err) {
+    console.error(err.message);
   }
-);
+});
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
